@@ -1,5 +1,3 @@
-import { retry } from "rxjs";
-
 export class Tag {
 
     static readonly ANGULAR = new Tag('Angular', 'red');
