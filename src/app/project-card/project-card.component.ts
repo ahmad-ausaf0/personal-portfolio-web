@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Project } from '../_models/Project';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-project-card',
@@ -9,10 +10,16 @@ import { Project } from '../_models/Project';
 export class ProjectCardComponent implements OnInit {
 
   @Input() project = {} as Project;
+  bsModalRef?: BsModalRef;
 
-  constructor() { }
+  constructor(private modalService : BsModalService) { }
 
   ngOnInit(): void {
+  }
+
+  openProjectModal() {
+
+    this.bsModalRef = this.modalService.show('');
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../_models/Project';
 import { Tag } from '../_models/Tag';
+import { ProjectsService } from '../_services/projects.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,21 +11,25 @@ import { Tag } from '../_models/Tag';
 })
 export class PortfolioComponent implements OnInit {
 
-  project : Project = {
-    id : 0,
-    name : 'Sample Angular App',
-    summary : 'Test Summary',
-    description : '',
-    projectLink : '',
-    tags : [Tag.ANGULAR, Tag.JAVASCRIPT],
-    pictures : []
-  };
+  // project : Project = {
+  //   id : 0,
+  //   name : 'Sample Angular App',
+  //   summary : 'Test Summary',
+  //   description : '',
+  //   projectLink : '',
+  //   tags : [Tag.ANGULAR, Tag.JAVASCRIPT],
+  //   pictures : []
+  // };
 
-  constructor(private titleService : Title) { 
+  projects = {} as Project[];
+
+  constructor(private titleService : Title, private projectsService : ProjectsService) { 
     this.titleService.setTitle('Ausaf Ansari - Portfolio')
   }
 
   ngOnInit(): void {
+
+    this.projects = this.projectsService.getProjects();
   }
 
 }

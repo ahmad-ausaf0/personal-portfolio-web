@@ -7,6 +7,8 @@ export class Tag {
     static readonly JAVASCRIPT = new Tag('JavaScript', 'darkcyan');
     static readonly NODEJS = new Tag('NodeJs', 'green');
     static readonly REACT = new Tag('React', 'darkblue');
+    static readonly PYTHON = new Tag('Python', 'pink');
+    static readonly CSHARP = new Tag('Csharp', 'cyan');
 
     private constructor(private readonly key: string, public readonly color: string) {}
 
