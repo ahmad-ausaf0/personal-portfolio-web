@@ -23,12 +23,47 @@ export class PortfolioComponent implements OnInit {
 
   projects = {} as Project[];
 
+  iCollapsed: boolean = true;
+  typeScript: boolean = false;
+  angular: boolean = false;
+
+  filtering: boolean = false;
+
   constructor(private titleService : Title, private projectsService : ProjectsService) { 
     this.titleService.setTitle('Ausaf Ansari - Portfolio')
   }
 
   ngOnInit(): void {
 
+    this.projects = this.projectsService.getProjects();
+  }
+
+  Filter() {
+
+    let filterTags: Tag[] = [];
+    if(this.typeScript) {
+      filterTags.push(Tag.TYPESCRIPT);
+    }
+
+    if(this.angular) {
+      filterTags.push(Tag.ANGULAR);
+    }
+
+    if(this.typeScript || this.angular) {
+      this.filtering = true;
+    }
+    else {
+      this.filtering = false;
+    }
+    this.projects = this.projectsService.GetProjectsByFilter(filterTags);
+  }
+
+  ResetFilters() {
+
+    this.typeScript = false;
+    this.angular = false;
+    
+    this.filtering = false;
     this.projects = this.projectsService.getProjects();
   }
 

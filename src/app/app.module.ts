@@ -12,6 +12,10 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,18 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ResumeComponent,
     ContactComponent,
     PageNotFoundComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
