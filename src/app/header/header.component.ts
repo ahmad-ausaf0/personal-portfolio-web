@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+
+  constructor(private darkModeService: DarkModeService) {}
+
+  onToggle(): void {
+    this.darkModeService.toggle();
+  }
 
   ngOnInit(): void {
   }

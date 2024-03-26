@@ -1,1 +1,173 @@
-<p>resume works!</p>
+<div class="container text-center">
+    <button class="btn btn-primary mb-5 shadow border" (click)="DownLoadFile()">Download PDF Resume</button>
+
+   <div class="pb-2">
+
+        <accordion [isAnimated]="true" class="shadow">
+            <accordion-group [(isOpen)]="isWorkExperienceOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Work Experience</div>
+
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isWorkExperienceOpen" style="color: white;">></div>
+                        <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+                    </div>
+
+                </button>
+                
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Consultant | Angular Developer</h2>
+                    <h3 class="text-primary">Skillikz Technologies Pvt Ltd. | Kochi, Kerala</h3>
+                    <ul>
+                        <li>Collaborated with cross-functional teams to develop and
+                            maintain, The Car Loan Centre (TCLC) web application based
+                            on angular.</li>
+                        <li>Implemented user interfaces and features using angular 14
+                            and collaborated with backend developers to integrate
+                            RESTful APIs.</li>
+                        <li>Improved application performance by 25% through code
+                            optimization and refactoring.</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Research Intern</h2>
+                    <h3 class="text-primary">CPS Lab (IIC, University of Delhi, South
+                        Campus) | New Delhi, Delhi</h3>
+                    <ul>
+                        <li>Performed classification technique on PCOS (Polycystic
+                            ovary syndrome) dataset using algorithm ANN (Artificial
+                            Neural Network), KNN (K-nearest neighbours) and MLP
+                            (Multi-layer Perceptron). </li>
+                        <li>Got an accuracy of 95.55% on 8 features among 42 features, using MLP algorithm along with feature selection technique.</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Research Intern</h2>
+                    <h3 class="text-primary">The Sparks Foundation</h3>
+                    <ul>
+                        <li>Built a Social Media Integrated android application, where a user can log in via facebook and google sign-in (Both) </li>
+                        <li>After successful login, details of the user are displayed inside the Text View</li>
+                    </ul>
+                </div>
+
+            </accordion-group>
+
+            <accordion-group [(isOpen)]="isEducationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Education</div>
+
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isEducationOpen" style="color: white;">></div>
+                        <div *ngIf="isEducationOpen" style="color: white;">v</div>
+                    </div>
+
+                </button>
+
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Master of Science (Informatics)</h2>
+                    <h3 class="text-primary">Institute of Informatics and Communication, University of Delhi</h3>
+                    <ul>
+                        <li>Graduated from University of Delhi in October 2020</li>
+                        <li>Graduated with a 6.94 CGPA</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Bachelor of Science (Hons) Computer
+                        Science</h2>
+                    <h3 class="text-primary">Keshav Mahavidyalaya, University of Delhi</h3>
+                    <ul>
+                        <li>Graduated in computer science from University of Delhi in June 2018</li>
+                        <li>Graduated with a 5.96 CGPA</li>
+                    </ul>
+                </div>
+
+            </accordion-group>
+
+            <accordion-group [(isOpen)]="isCertificationsOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Certifications</div>
+
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isCertificationsOpen" style="color: white;">></div>
+                        <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
+                    </div>
+
+                </button>
+
+                <div style="text-align: left;">
+                    <h3>Responsive Web Design | freeCodeCamp</h3>
+                    <ul>
+                        <li>Obtained - October 2021</li>
+                        <li>Interative learning via freeCodeCamp</li>
+                    </ul>
+                </div>
+
+                
+                <div style="text-align: left;">
+                    <h3>Introduction to Quantum Computing Course | IBM and The Coding School</h3>
+                    <ul>
+                        <li>Obtained - May 2021</li>
+                        <li>It was a Remote Certification Program, for a foundational understanding of quantum computing.</li>
+                    </ul>
+                </div>
+
+            </accordion-group>
+
+            <accordion-group [(isOpen)]="isSkillsOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Skills</div>
+
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isSkillsOpen" style="color: white;">></div>
+                        <div *ngIf="isSkillsOpen" style="color: white;">v</div>
+                    </div>
+
+                </button>
+                
+                <div class="row" style="text-align: left;">
+                    <div class="col">
+                        <h3>Programming Languages:</h3>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>C#</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Frameworks:</h3>
+                        <ul>
+                            <li>Angular</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Other Skills:</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Source Control via git</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Operating Systems:</h3>
+                        <ul>
+                            <li>Windows OS</li>
+                            <li>Linux OS</li>
+                            <li>Mac OS</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </accordion-group>
+        </accordion>
+   </div> 
+  
+</div>
