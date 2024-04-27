@@ -4,7 +4,7 @@
         <div class="col-lg shadow border m-1">
             <div class="text-center">
                 <h2>About me</h2>
-                <img src="../../assets/Ausaf.jpg" alt="profile-image" width="256"
+                <img src="https://gist.github.com/assets/35466676/accf7a30-13a9-4f30-baca-7b6743190b16" alt="profile-image" width="256"
                 height="256" class="rounded-circle">
                 <p>Angular Developer with expertise in developing frontend user interface using HTML5, CSS3, JavaScript and Angular. Involved in end-to-end development of software products from requirement analysis, coding, debugging and implementation. Excellent communication, interpersonal, organizing and analytical skills along with a positive attitude, dedication and professionalism.</p>
             </div>
@@ -19,9 +19,11 @@
 
             <carousel>
                 <div *ngFor="let picture of featuredProject.pictures">
-                    <slide>
-                        <img src={{picture}} alt="slidePics" style="display: block; width: 100%;">
-                    </slide>
+                  <slide>
+                    <div class="slide-container">
+                      <img src={{picture}} alt="slidePics">
+                    </div>
+                  </slide>
                 </div>
             </carousel>
 
