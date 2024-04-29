@@ -8,6 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit {
 
+  isDarkMode: boolean = false;
   constructor(private titleService : Title) { 
     this.titleService.setTitle('Ausaf Ansari - Contact')
   }

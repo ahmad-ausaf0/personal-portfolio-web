@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
+  isDarkMode: boolean = false;
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
 
   constructor(private darkModeService: DarkModeService) {}

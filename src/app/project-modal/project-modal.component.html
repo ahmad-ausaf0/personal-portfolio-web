@@ -1,9 +1,9 @@
-<div class="modal-header">
+<div class="modal-header" [ngClass]="{'dark-mode': isDarkMode}">
     <h2>{{project.name}}</h2>
     <button class="btn-close" (click)="bsModalRef.hide()"></button>
 </div>
 
-<div class="modal-body">
+<div class="modal-body" [ngClass]="{'dark-mode': isDarkMode}">
     <carousel>
         <div *ngFor="let picture of project.pictures">
             <slide>

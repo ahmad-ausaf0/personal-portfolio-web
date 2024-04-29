@@ -1,4 +1,20 @@
-<div class="jumbotron" style="position: relative;">
+<div class="jumbotron" style="position: relative;" [ngClass]="{'dark-mode': isDarkMode}">
+
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle" [checked]="darkMode$ | async"
+            (change)="onToggle()"  [(ngModel)]="isDarkMode">
+            <span class="slider round"></span>
+        </label>
+        <span style="margin-left: 5px;">Dark Mode</span>
+    </div>
+    
+
+    <!-- <input
+    type="checkbox"
+    [checked]="darkMode$ | async"
+    (change)="onToggle()"
+  /> -->
     <div class="text-center">
         <h1 class="display-4">Ausaf Ahmad Ansari</h1>
         <h1>Software Developer | Angular Developer</h1>
@@ -18,9 +34,3 @@
         </a>
     </div>
 </div>
-
-<!-- <input
-    type="checkbox"
-    [checked]="darkMode$ | async"
-    (change)="onToggle()"
-  /> -->

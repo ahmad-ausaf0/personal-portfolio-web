@@ -1,0 +1,11 @@
+.container {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    color: #000; /* Set default text color to black */
+}
+
+/* Dark mode styles */
+.container.dark-mode {
+    background-color: #343a40;
+    color: #fff; /* Set text color to white in dark mode */
+}

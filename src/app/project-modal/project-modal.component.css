@@ -1,0 +1,11 @@
+.modal-header, .modal-body {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    color: #000; /* Set default text color to black */
+}
+
+/* Dark mode styles */
+.modal-header.dark-mode, .modal-body.dark-mode {
+    background-color: #343a40;
+    color: #fff; /* Set text color to white in dark mode */
+}

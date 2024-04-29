@@ -9,6 +9,7 @@ import { Project } from '../_models/Project';
 })
 export class ProjectModalComponent implements OnInit {
 
+  isDarkMode: boolean = false;
   project = {} as Project;
 
   constructor(public bsModalRef : BsModalRef) { }
