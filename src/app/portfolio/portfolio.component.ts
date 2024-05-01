@@ -26,6 +26,11 @@ export class PortfolioComponent implements OnInit {
   iCollapsed: boolean = true;
   typeScript: boolean = false;
   angular: boolean = false;
+  javascript: boolean = false;
+  react: boolean = false;
+  nodejs: boolean = false;
+  java: boolean = false;
+  csharp: boolean = false;
 
   filtering: boolean = false;
 
@@ -49,7 +54,31 @@ export class PortfolioComponent implements OnInit {
       filterTags.push(Tag.ANGULAR);
     }
 
-    if(this.typeScript || this.angular) {
+    
+    if(this.javascript) {
+      filterTags.push(Tag.JAVASCRIPT);
+    }
+
+    
+    if(this.react) {
+      filterTags.push(Tag.REACT);
+    }
+
+    if(this.java) {
+      filterTags.push(Tag.JAVA);
+    }
+
+    
+    if(this.csharp) {
+      filterTags.push(Tag.CSHARP);
+    }
+
+    
+    if(this.nodejs) {
+      filterTags.push(Tag.NODEJS);
+    }
+
+    if(this.typeScript || this.angular || this.javascript || this.react || this.csharp || this.nodejs) {
       this.filtering = true;
     }
     else {

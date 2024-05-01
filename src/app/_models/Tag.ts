@@ -9,6 +9,7 @@ export class Tag {
     static readonly REACT = new Tag('React', 'darkblue');
     static readonly PYTHON = new Tag('Python', 'pink');
     static readonly CSHARP = new Tag('Csharp', 'cyan');
+    static readonly JAVA = new Tag('Java', 'blueviolet');
 
     private constructor(private readonly key: string, public readonly color: string) {}
 

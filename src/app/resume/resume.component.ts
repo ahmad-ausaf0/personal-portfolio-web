@@ -23,7 +23,7 @@ export class ResumeComponent implements OnInit {
   DownLoadFile() {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', '../../assets/AusafResume.pdf');
+    link.setAttribute('href', 'https://online.publuu.com/487104/1094068');
     link.setAttribute('download', 'AusafResume.pdf');
     link.click();
     link.remove();
