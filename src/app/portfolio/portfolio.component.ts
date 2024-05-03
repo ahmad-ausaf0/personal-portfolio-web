@@ -11,15 +11,6 @@ import { ProjectsService } from '../_services/projects.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  // project : Project = {
-  //   id : 0,
-  //   name : 'Sample Angular App',
-  //   summary : 'Test Summary',
-  //   description : '',
-  //   projectLink : '',
-  //   tags : [Tag.ANGULAR, Tag.JAVASCRIPT],
-  //   pictures : []
-  // };
 
   projects = {} as Project[];
 
@@ -33,6 +24,7 @@ export class PortfolioComponent implements OnInit {
   csharp: boolean = false;
 
   filtering: boolean = false;
+  projectsNotFound: boolean = false;
 
   constructor(private titleService : Title, private projectsService : ProjectsService) { 
     this.titleService.setTitle('Ausaf Ansari - Portfolio')
@@ -85,14 +77,24 @@ export class PortfolioComponent implements OnInit {
       this.filtering = false;
     }
     this.projects = this.projectsService.GetProjectsByFilter(filterTags);
+    if (this.projects.length === 0) {
+      this.projectsNotFound = true;
+    } else {
+      this.projectsNotFound = false;
+    }
   }
 
   ResetFilters() {
 
     this.typeScript = false;
     this.angular = false;
-    
+    this.javascript = false;
+    this.react = false;
+    this.nodejs = false;
+    this.java = false;
+    this.csharp = false;
     this.filtering = false;
+    this.projectsNotFound = false;
     this.projects = this.projectsService.getProjects();
   }
 
