@@ -16,7 +16,7 @@
 
     <h3 class="mt-2">Description</h3>
     <p>{{project.description}}</p>
-    <p *ngIf="project.id === 1">You can find this project Live <a href={{project.liveLink}} target="_blank">here</a></p>
+    <p *ngIf="project.liveLink !== ''">You can find this project Live <a href={{project.liveLink}} target="_blank">here</a></p>
     <p>You can find this project on Github <a href={{project.projectLink}} target="_blank">here</a></p>
 
     <hr>

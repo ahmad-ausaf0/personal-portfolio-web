@@ -22,6 +22,7 @@ export class PortfolioComponent implements OnInit {
   nodejs: boolean = false;
   java: boolean = false;
   csharp: boolean = false;
+  firebase: boolean = false;
 
   filtering: boolean = false;
   projectsNotFound: boolean = false;
@@ -70,7 +71,11 @@ export class PortfolioComponent implements OnInit {
       filterTags.push(Tag.NODEJS);
     }
 
-    if(this.typeScript || this.angular || this.javascript || this.react || this.csharp || this.nodejs) {
+    if(this.firebase) {
+      filterTags.push(Tag.FIREBASE);
+    }
+
+    if(this.typeScript || this.angular || this.javascript || this.react || this.csharp || this.nodejs || this.firebase) {
       this.filtering = true;
     }
     else {
@@ -94,6 +99,7 @@ export class PortfolioComponent implements OnInit {
     this.java = false;
     this.csharp = false;
     this.filtering = false;
+    this.firebase = false;
     this.projectsNotFound = false;
     this.projects = this.projectsService.getProjects();
   }

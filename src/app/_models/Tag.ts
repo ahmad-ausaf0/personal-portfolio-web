@@ -10,6 +10,7 @@ export class Tag {
     static readonly PYTHON = new Tag('Python', '#748D92');
     static readonly CSHARP = new Tag('Csharp', '#748D92');
     static readonly JAVA = new Tag('Java', '#748D92');
+    static readonly FIREBASE = new Tag('Firebase', '#748D92');
 
     private constructor(private readonly key: string, public readonly color: string) {}
 
