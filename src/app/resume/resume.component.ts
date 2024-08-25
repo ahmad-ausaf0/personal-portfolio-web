@@ -25,7 +25,7 @@ export class ResumeComponent implements OnInit {
     link.setAttribute('target', '_blank');
     // link.setAttribute('href', 'https://online.publuu.com/487104/1094068');
     // link.setAttribute('href', 'https://publuu.com/flip-book/490690/1103231');
-    link.setAttribute('href', 'https://drive.google.com/file/d/1ivci83Tzb7JadNMTyPcQ7T_q3ETQW6tp/view?usp=sharing');
+    link.setAttribute('href', 'https://drive.google.com/file/d/1jEkrwqB5K5v6w41ejA0Flj6IFPip_9t_/view?usp=drive_link');
     // link.setAttribute('download', 'AusafResume.pdf');
     link.click();
     link.remove();
